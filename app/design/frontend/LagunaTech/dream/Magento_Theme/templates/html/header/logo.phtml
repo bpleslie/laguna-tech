@@ -1,0 +1,124 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<?php if ($block->isHomePage()):?>
+<strong class="logo">
+    <?php else: ?>
+    <a class="logo" href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+        <?php endif ?>
+        <h2 class="cashual">ca$hual</h2>
+<!--        <img src="--><?php ///* @escapeNotVerified */ echo $block->getLogoSrc() ?><!--"-->
+<!--             alt="--><?php ///* @escapeNotVerified */ echo $block->getLogoAlt() ?><!--"-->
+<!--            --><?php //echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+<!--            --><?php //echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+<!--        />-->
+        <?php if ($block->isHomePage()):?>
+</strong>
+<?php else:?>
+    </a>
+<?php endif?>
+
+<div id="popup-modal">
+</div>
+<div id="coupon-popup-modal">
+    <h3>See anything you like? Here's 10% off!</h3>
+    <h4>Use Coupon Code: TENOFF</h4>
+</div>
+<script>
+    require([
+        'jquery',
+        'jquery/ui',
+        'Magento_Ui/js/modal/modal'
+    ], function($) {
+        var ageVerified = sessionStorage.getItem("age_verified");
+
+        if (typeof ageVerified === undefined || !ageVerified) {
+            // age verification popup
+            $(function () {
+                $('#popup-modal').modal({
+                    title: 'Are you at least 21 years old?',
+                    autoOpen: true,
+                    clickableOverlay: false,
+                    closed: function () {
+                        //
+                    },
+                    buttons: [
+                    {
+                        text: 'Yes',
+                        attr: {
+                        'data-action': 'confirm'
+                        },
+                        'class': 'action-primary',
+                        click: function () {
+                            this.closeModal();
+                            sessionStorage.setItem("age_verified", true);
+                            sessionStorage.setItem("session_start", Date.now());
+                            sessionStorage.setItem("coupon_offered", false);
+                            offerCoupon();
+                        }
+                    },
+                    {
+                        text: 'No',
+                        attr: {
+                            'data-action': 'decline'
+                        },
+                        'class': 'action-secondary',
+                        click: function () {
+                            location.href = 'http://www.norml.org/act';
+                        }
+                    }
+                    ]
+                });
+            });
+        } else {
+            offerCoupon();
+        }
+
+        function offerCoupon() {
+            var sessionStart = sessionStorage.getItem("session_start");
+            var couponOffered = sessionStorage.getItem("coupon_offered");
+
+            if (typeof sessionStart !== undefined && couponOffered === 'false') {
+                var now = Date.now();
+                // convert ms to s
+                var sessionDuration = (now - sessionStart);
+                var couponThreshold = 30000;
+
+                // give the customer a coupon code if they've been on the site for over 2 min
+                if (sessionDuration < couponThreshold) {
+                    // coupon popup
+                    setTimeout(couponPopup, couponThreshold - sessionDuration);
+                }
+            }
+        }
+
+        function couponPopup() {
+            $('#coupon-popup-modal').modal({
+                title: 'Thanks for checking out our new site!',
+                autoOpen: true,
+                closed: function () {
+                    //
+                },
+                buttons: [
+                    {
+                        text: 'Apply To Cart',
+                        attr: {
+                            'data-action': 'confirm'
+                        },
+                        'class': 'action-primary',
+                        click: function () {
+                            this.closeModal();
+                            sessionStorage.setItem("coupon_offered", true);
+                        }
+                    }
+                ]
+            });
+        }
+    });
+</script>

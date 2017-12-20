@@ -1,0 +1,1366 @@
+// global styles
+
+  .message.global.demo {
+    background: #616262;
+  }
+
+  // header
+  .page-header {
+    height: 45px;
+
+    .logo {
+      margin: -20px 0 0 0;
+      font-family: 'Megrim', cursive !important;
+      color: white;
+    }
+
+    .logo:hover {
+      text-decoration: none !important;
+    }
+
+    .minicart-wrapper {
+      color: black;
+
+      .showcart {
+
+        &::before {
+          color: @color-white;
+        }
+
+        .counter.qty {
+          background: @color-white;
+          color: #1f2224;
+        }
+      }
+
+      .action.showcart:hover:before,
+      .action.showcart.active:before {
+        color: @color-white;
+      }
+    }
+
+    .qs-option-name {
+      color: #000;
+    }
+  }
+
+  #coupon-popup-modal {
+    display: none;
+  }
+
+  .modal-popup .modal-title {
+    border: none;
+  }
+
+  // add to cart
+  .columns .sidebar-additional {
+    .action.tocart {
+      background: #FFD700;
+      color: #000;
+      border-radius: 5px;
+    }
+  }
+
+  .block-minicart .block-content > .actions > .primary .action.primary {
+    background: #FFD700;
+    color: #000;
+    border-radius: 5px;
+  }
+
+  .box-tocart .action.tocart {
+    width: 100%;
+    background: #FFD700;
+    color: #000;
+    border-radius: 5px;
+  }
+
+  // cart
+  .checkout-cart-index {
+    .action.primary.checkout {
+      width: 100%;
+      background: #FFD700;
+      color: #000;
+      border-radius: 5px;
+    }
+  }
+
+  // checkout
+  .checkout-index-index {
+    header {
+      background: none;
+    }
+
+    .opc-progress-bar-item._active:before,
+    .opc-progress-bar-item._active > span:before {
+      background: #1f2224;
+    }
+
+    .checkout-shipping-method .actions-toolbar .action.primary,
+    .checkout-payment-method .payment-method-content > .actions-toolbar > .primary .action.primary {
+      background: #FFD700;
+      color: #000;
+      border-radius: 5px;
+    }
+  }
+
+  // fotorama gallery
+  .fotorama__active .fotorama__dot {
+    background-color: #1f2224 !important;
+    border-color: #1f2224 !important;
+  }
+
+  .fotorama__thumb-border {
+    border: 1px solid #1f2224;
+  }
+
+  // price
+  *[id^='old-price-'] {
+    .price {
+      color: red;
+      text-decoration: line-through;
+    }
+  }
+
+  .product-item .old-price {
+    width: 100%;
+    display: block;
+  }
+
+  // yotpo reviews
+  .yotpo-label {
+    display: none;
+  }
+
+  // media styles
+  .cms-index-index,
+  .category-vaporizers,
+  .category-glass {
+
+    .page-main {
+      max-width: none;
+      padding: 0;
+    }
+
+    .page-title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0
+    }
+
+    .block-promo {
+      height: 450px;
+      padding: 10px;
+      margin-bottom: 10px;
+
+      .content {
+        top: 40px;
+        right: 40px;
+        width: 40%;
+
+        &.bg-white {
+          background-color: rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+
+    .widget .block-promo img {
+      max-width: none
+    }
+
+    .block-promo-2columns .block-promo {
+      width: 50%;
+    }
+
+    .block-promo-3columns .block-promo {
+      width: 33.3%;
+    }
+
+    .block-promo {
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      width: 100%;
+      color: #333 !important
+    }
+
+    .block-promo:hover {
+      text-decoration: none
+    }
+
+    .block-promo .content {
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 1;
+      overflow: hidden;
+      padding: 25px 35px 35px
+    }
+
+    .block-promo .title {
+      display: block;
+      font-weight: 300;
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 15px
+    }
+
+    .block-promo .info {
+      display: block;
+      font-weight: 300;
+      font-size: 2.2rem;
+      margin-bottom: 20px
+    }
+
+    .block-promo .more {
+      font-size: 1.6rem
+    }
+
+    .block-promo .icon.more {
+      display: inline-block;
+      text-decoration: none
+    }
+
+    .block-promo .icon.more:after {
+      font-family: 'luma-icons';
+      content: '\e608';
+      font-size: 12px;
+      line-height: inherit;
+      color: inherit;
+      overflow: hidden;
+      speak: none;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      margin: 0 0 0 5px
+    }
+
+    .block-promo .button.more {
+      font-size: 1.8rem;
+      background-image: none;
+      background: #1979c3;
+      padding: 7px 15px;
+      color: #fff;
+      border: 1px solid #1979c3;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      box-sizing: border-box;
+      vertical-align: middle;
+      border-radius: 3px;
+      text-decoration: none;
+      padding: 10px 15px
+    }
+
+    .block-promo .button.more:focus, .block-promo .button.more:active {
+      background: #006bb4;
+      border: 1px solid #006bb4;
+      color: #fff
+    }
+
+    .block-promo .button.more:hover {
+      background: #006bb4;
+      border: 1px solid #006bb4;
+      color: #fff
+    }
+
+    .block-promo .button.more.disabled, .block-promo .button.more[disabled], fieldset[disabled] .block-promo .button.more {
+      cursor: default;
+      pointer-events: none;
+      opacity: .5
+    }
+
+    .block-promo .title + .button {
+      margin-top: 10px
+    }
+
+    .block-promo sup {
+      top: -0.2em
+    }
+
+    .block-promo-2columns .content {
+      padding: 20px 25px
+    }
+
+    .block-promo-hp .bg-white, .block-promo-hp .home-top-rated .content {
+      padding: 20px
+    }
+
+    .block-promo-hp .block-promo {
+      margin: 0 0 0 .5%;
+    }
+
+    .block-promo-wrapper .home-new-products {
+      float: right !important;
+      margin-right: .5%;
+    }
+
+    .block-promo-wrapper:before, .block-promo-wrapper:after {
+      content: "";
+      display: table
+    }
+
+    .block-promo-wrapper:after {
+      clear: both
+    }
+
+    .block-promo-wrapper .block-promo {
+      float: left;
+      padding: 0;
+    }
+
+    .home-420-sale, .home-top-rated, .home-new-products {
+      width: 32.65%;
+      background-color: @color-gray40;
+    }
+
+    .home-product-lifestyle, .home-glass {
+      width: 65.85%;
+      background-color: #ffdd16;
+    }
+
+    .home-top-rated {
+      height: 375px;
+    }
+
+    .home-top-rated .content {
+      top: 0;
+      right: 0;
+      width: 60%
+    }
+
+    .home-420-sale, .home-new-products {
+      height: 660px;
+      padding: 0;
+
+      img {
+        max-height: 100%;
+        max-width: none !important;
+      }
+
+      .content {
+        left: 40px;
+        right: auto !important;
+      }
+    }
+
+    .home-new-products .content {
+      top: 25px;
+      right: 25px;
+      left: 25px
+    }
+
+    .home-glass {
+      height: 276px;
+      margin-top: .5% !important;
+      padding: 0;
+
+      img {
+        position: absolute;
+        top: -110px;
+      }
+    }
+
+    .home-main,
+    .vaporizers-main,
+    .glass-main {
+      background-color: gray;
+      padding: 0;
+
+      .content {
+         top: 40px;
+         right: 40px;
+         width: 40%;
+      }
+
+      img {
+        position: absolute;
+        top: -200px;
+      }
+    }
+
+    .home-product-lifestyle {
+      height: 276px;
+      margin-bottom: .5% !important;
+      padding: 0;
+    }
+
+    .home-product-lifestyle .content {
+      top: 20px !important;
+      right: 20px !important;
+      width: 40%;
+    }
+
+    .home-product-lifestyle img {
+      max-width: 100% !important
+    }
+
+    // vapes
+    .vaporizers-main img {
+      top: -400px !important;
+    }
+
+    .vaporizers-portable img {
+      position: absolute;
+      bottom: 0;
+    }
+
+    // glass
+    .glass-hand-pipes,
+    .glass-oil-rigs,
+    .glass-water-pipes {
+
+      img {
+        min-height: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .glass-water-pipes {
+
+      .content {
+        width: 50%;
+      }
+    }
+  }
+
+// desktop styles
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+  // header
+  header, .nav-sections, .navigation {
+    background-color: #1f2224;
+    border-color: #1f2224;
+    color: @color-white;
+
+    // full width
+    .navigation, .breadcrumbs, .page-header .header.panel, .header.content,
+    .page-wrapper > .widget, .block.category.event, .top-container, .page-main {
+      max-width: 100%;
+    }
+  }
+
+  .header.content {
+    padding: 10px 20px 0;
+  }
+
+  .header.content:after {
+    clear: none;
+  }
+
+  .nav-sections {
+    margin-bottom: 0;
+  }
+
+  .panel.header {
+    border: none;
+    color: @color-white;
+    background: #1f2224;
+    padding-bottom: 0;
+    padding-top: 15px;
+  }
+
+  .block-search {
+    width: 70%;
+    float: left;
+
+    input {
+      border-radius: 5px;
+    }
+  }
+
+  // navigation
+  nav.navigation {
+    width: 20%;
+    float: left;
+    min-width: 400px;
+    height: 40px;
+
+    .level0 .submenu .active > a,
+    .level1 .submenu .active > a {
+      border-color: #1f2224;
+    }
+  }
+
+  .navigation .level-top > a > span {
+    color: @color-white;
+  }
+
+  .navigation .level-top.first:after {
+    -webkit-font-smoothing: antialiased;
+    font-size: 10px;
+    line-height: 22px;
+    color: inherit;
+    content: '\e622';
+    font-family: 'luma-icons';
+    margin-top: 15px;
+    color: @color-white;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .nav-1 {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .nav-2, .nav-3 {
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  .nav-2 a {
+    margin-left: 30px;
+  }
+
+  .nav-2:hover,
+  .nav-3:hover {
+    color: @color-white;
+  }
+
+  .level1 a:after {
+    -webkit-font-smoothing: antialiased;
+    font-size: 10px;
+    line-height: 18px;
+    content: '\e608';
+    font-family: 'luma-icons';
+    margin: 3px 10px 0 10px;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+  }
+
+  .nav-right {
+    display: inline-block;
+    width: 40%;
+    float: right;
+
+    #switcher-currency {
+      display: none;
+    }
+
+    .header.links {
+      float: right;
+    }
+
+    span, a {
+      font-size: 13px;
+    }
+  }
+
+  // main content
+  .breadcrumbs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0 !important;
+  }
+
+  // product page
+  .catalog-product-view {
+
+    // full width
+    .navigation, .breadcrumbs, .page-header .header.panel, .header.content,
+    .page-wrapper > .widget, .block.category.event, .top-container, .page-main {
+      max-width: 100%;
+    }
+
+    .product.media {
+      width: 33%;
+      max-width: 584px;
+    }
+
+    .product-info-main {
+      width: 40%;
+      padding-right: 20px;
+
+      h1 {
+        font-size: 21px;
+        font-weight: 900;
+      }
+
+      .product-info-price {
+        margin-top: 15px;
+
+        .price-box {
+          display: block;
+          width: auto;
+
+          .old-price {
+
+            .price-label {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .product-info-stock-sku {
+          display: block;
+          text-align: left;
+          padding: 0;
+        }
+      }
+    }
+
+    .product-add-form {
+      width: 15%;
+      float: right;
+      border: 1px solid #c1c1c1;
+      border-radius: 5px;
+      padding: 30px;
+    }
+  }
+
+  // category page / home page product grid
+  .catalog-category-view,
+  .catalogsearch-result-index,
+  .cms-index-index {
+
+    // full width
+    .navigation, .breadcrumbs, .page-header .header.panel, .header.content,
+    .page-wrapper > .widget, .block.category.event, .top-container, .page-main {
+      max-width: 100%;
+    }
+
+    .products-grid .product-item-info:hover,
+    .products-grid .product-item-info.active {
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // customer account
+  .account,
+  .customer-account-login,
+  .customer-account-logout {
+
+    // full width
+    .navigation, .breadcrumbs, .page-header .header.panel, .header.content,
+    .page-wrapper > .widget, .block.category.event, .top-container, .page-main {
+      max-width: 100%;
+    }
+
+    h1 {
+      margin-top: 40px;
+    }
+
+    .block-collapsible-nav .item.current a,
+    .block-collapsible-nav .item.current > strong {
+      border-color: #1f2224;
+    }
+  }
+}
+
+// in-between styles
+@media screen and (min-width: @screen__l) and (max-width: 1440px) {
+  .block-promo {
+
+    &.home-main,
+    &.vaporizers-main,
+    &.glass-main {
+
+      img {
+        top: 0 !important;
+      }
+    }
+
+    &.vaporizers-desktop,
+    &.vaporizers-portable {
+
+      img {
+        min-height: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+// tablet styles
+@media screen and (min-width: @screen__m) and (max-width: @screen__l) {
+
+  .block-search {
+    max-width: 65%;
+    float: right;
+    width: auto;
+  }
+
+  .block-promo {
+
+    &.home-main,
+    &.vaporizers-main,
+    &.glass-main {
+
+      img {
+        top: 0 !important;
+      }
+    }
+
+    &.home-main {
+
+      img {
+        min-height: 450px;
+      }
+    }
+
+    &.home-420-sale,
+    &.home-new-products,
+    &.home-product-lifestyle,
+    &.home-top-rated {
+      width: 50% !important;
+      margin: 0 !important;
+      height: 300px;
+
+      img {
+        min-height: 300px;
+        max-width: none;
+        width: 100%;
+      }
+
+      .content {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 90%;
+        height: 90%;
+        left: 5%;
+        top: 5%;
+      }
+    }
+
+    &.home-glass {
+      width: 100% !important;
+      margin: 0 !important;
+      height: 300px;
+
+      img {
+        min-height: 300px;
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    &.vaporizers-desktop,
+    &.vaporizers-portable,
+    &.glass-hand-pipes,
+    &.glass-oil-rigs,
+    &.glass-water-pipes {
+      width: 100% !important;
+
+      img {
+        height: auto;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+// 6plus styles
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+  // header
+  header {
+    background: #1f2224;
+
+    .logo {
+      margin-top: -7px !important;
+      margin-left: -25px !important;
+      max-width: none;
+    }
+
+    .block-search {
+      margin-top: 10px;
+
+      label {
+        width: 10%;
+        float: right;
+      }
+
+      .label:before {
+        color: @color-white;
+      }
+
+      input {
+        margin: 40px 0 5px 0;
+      }
+
+      .control {
+        border: none;
+        background-color: #1f2224;
+
+        input {
+          border-radius: 5px;
+        }
+      }
+    }
+
+
+    .minicart-wrapper {
+      margin-top: 10px;
+
+      .action.showcart:before {
+        color: @color-white;
+      }
+    }
+  }
+
+  .header.content {
+    padding-top: 0;
+    overflow: hidden;
+  }
+
+  .page-header {
+    margin-bottom: 0;
+    border: none;
+  }
+
+  // main nav
+  .nav-sections {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+
+    .nav-sections-item-title {
+      display: none;
+    }
+
+    .nav-sections-item-content {
+      margin: 0;
+      padding: 0;
+      background: #1f2224;
+
+      .navigation {
+
+        a, a:hover {
+          color: @color-white;
+        }
+
+        .level0 {
+          float: left;
+          border: none;
+          display: inline-block;
+
+          .level-top {
+            text-transform: capitalize;
+          }
+        }
+
+        .nav-2 .level-top, .nav-3 .level-top {
+          padding: 8px 20px 8px 15px;
+        }
+
+        .submenu:not(:first-child) .active > a {
+          border-color: @color-white;
+        }
+      }
+    }
+  }
+
+  .breadcrumbs {
+    background: @color-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+  }
+
+  // body
+  body {
+    background: @color-gray76;
+
+    .breadcrumbs {
+      display: block;
+    }
+
+    .breadcrumbs, .footer.content,
+    .page-main, .page-wrapper > .widget,
+    .page-wrapper > .page-bottom,
+    .block.category.event, .top-container {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .page-main .page-title-wrapper {
+      background: @color-white;
+      margin: 5px 0;
+      padding: 15px;
+
+      .page-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // sidebar
+  .sidebar {
+    .block {
+      background: @color-white;
+      padding: 15px;
+      margin-bottom: 5px;
+    }
+
+    .filter-no-options .filter-title:before {
+      display: none;
+    }
+  }
+
+  // category page
+  .catalog-category-view,
+  .catalogsearch-result-index {
+
+    .sidebar-main .block:not(.active) .filter-title strong {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 7px 0;
+      margin-bottom: 15px;
+    }
+
+    .columns {
+      padding-top: 0;
+    }
+
+    .column.main {
+      padding-bottom: 0;
+
+      .products {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .toolbar-amount {
+        background: @color-white;
+        padding: 5px 15px;
+      }
+
+      .sorter {
+        position: relative;
+        background: @color-white;
+        padding: 10px 0;
+        width: 100%;
+        margin-left: 5px;
+        right: 0;
+        text-align: center;
+      }
+
+      .product-item-info {
+        width: 100%;
+
+        .product-item-details {
+          padding: 0 10px 5px 10px;
+        }
+      }
+
+      .product-items {
+        margin-left: 0;
+      }
+
+      .product-item {
+        padding-left: 0;
+        margin-bottom: 5px;
+        width: 49%;
+        background: @color-white;
+
+        &:nth-child(odd) {
+          margin-right: 5px;
+        }
+
+        &:nth-child(even) {
+          float: right;
+        }
+      }
+    }
+  }
+
+  // product page
+  .catalog-product-view {
+
+    .column.main {
+      width: 100%;
+      padding-bottom: 0;
+      margin-bottom: 5px;
+    }
+
+    .product-info-main {
+      background: @color-white;
+      padding: 15px;
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      .yotpo {
+        margin-bottom: 15px;
+
+        .bottomLine .yotpo-display-wrapper {
+          padding: 0;
+        }
+      }
+
+      .product-info-price {
+        width: 100% !important;
+
+        .old-price {
+
+          .price-label {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .product {
+      &.media {
+        background: @color-white;
+      }
+
+      &.data.items {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+
+      &.info.detailed {
+        margin-bottom: 0;
+      }
+    }
+
+    .product-add-form,
+    .block-compare,
+    .block-wishlist {
+      background: @color-white;
+      padding: 15px;
+      margin-bottom: 5px;
+    }
+
+    .product-add-form {
+      margin-top: 5px;
+
+      .box-tocart {
+        margin: 0;
+      }
+
+      .control {
+        float: right;
+      }
+    }
+
+    .yotpo-main-widget .yotpo-display-wrapper {
+      background: @color-white;
+      padding: 15px;
+    }
+  }
+
+  .yotpo-main-widget .yotpo-display-wrapper .yotpo-main-title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // footer
+  .page-footer {
+    margin-top: 0;
+    background: url('@{path-to-pub}images/Thicc_Whtite.png') repeat 0 0;
+  }
+
+  .footer.content {
+    padding-top: 0;
+
+    .block.newsletter {
+      margin-bottom: 5px;
+    }
+
+    .links > li {
+      margin: 0;
+    }
+  }
+
+  // cart page
+  .checkout-cart-index {
+
+    .columns .column.main {
+      padding-bottom: 0;
+    }
+
+    .cart-summary {
+      background: @color-white;
+      margin: 0 5px;
+
+      .block > .title {
+        border-top: none;
+      }
+    }
+
+    .cart-container .form-cart {
+      background: @color-white;
+      margin: 5px;
+      padding-bottom: 20px;
+    }
+
+    .cart-discount {
+      background: @color-white;
+      margin: 5px;
+    }
+
+    .cart-empty {
+      background: white;
+      margin: 0 5px 5px 5px;
+      padding: 15px;
+    }
+  }
+
+  // checkout
+  .checkout-index-index {
+
+    .page-header {
+      background: @color-white;
+      margin: 5px;
+      padding: 15px;
+    }
+
+    .authentication-wrapper {
+      padding-right: 15px;
+    }
+
+    .opc-estimated-wrapper {
+      background: @color-white;
+      border: none;
+      margin: 0;
+    }
+
+    .opc-wrapper {
+      .step-title {
+        background: @color-white;
+        margin: 5px 0 5px;
+        padding: 15px;
+      }
+
+      .step-content {
+        background: @color-white;
+        margin: 5px 0;
+        padding: 15px;
+      }
+
+      .form-login, .form-shipping-address, .methods-shipping {
+        background: @color-white;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  // checkout success
+  .checkout-onepage-success {
+    background: @color-white;
+    padding: 15px;
+    margin-top: 5px;
+  }
+
+  // customer account
+  .account {
+    .page.messages {
+      margin-bottom: 0;
+    }
+
+    .column.main {
+      padding-bottom: 0;
+
+      .page-title-wrapper .order-status {
+        margin: 0;
+      }
+
+      .block,
+      .form-edit-account,
+      .form-address-edit,
+      .form-newsletter-manage,
+      .form-wishlist-items {
+        background: @color-white;
+        padding: 15px;
+        margin-bottom: 5px;
+      }
+
+      .order-details-items {
+        margin-bottom: 5px;
+        background: @color-white;
+      }
+
+      .product-items {
+        margin-left: 0;
+      }
+    }
+
+    .sidebar {
+      .block {
+        background: @color-white;
+        padding: 15px;
+        margin-bottom: 5px;
+      }
+
+      .block-collapsible-nav {
+        top: 0;
+        padding: 0;
+
+        .item.current a,
+        .item.current > strong {
+          border-color: #1f2224;
+        }
+      }
+
+      .block-reorder {
+        display: none;
+      }
+    }
+
+    .table-wrapper {
+      background: @color-white;
+    }
+  }
+
+  .customer-account-login {
+    .block.block-customer-login,
+    .block.block-new-customer {
+      background: @color-white;
+      padding: 15px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .customer-account-create {
+    .form-create-account {
+      background: @color-white;
+      padding: 15px;
+    }
+  }
+
+  // home and main category pages
+  .cms-index-index,
+  .category-vaporizers,
+  .category-glass,
+  .category-accessories {
+
+    .page-title-wrapper {
+      display: none;
+    }
+
+    .block-promo {
+      height: 250px !important;
+
+      .content {
+        width: 90% !important;
+        height: 90%;
+        left: 5%;
+        top: 5% !important;
+      }
+
+      &.home-main {
+        height: 325px !important;
+      }
+
+      &.vaporizers-main {
+        height: 300px !important;
+
+        .info {
+          display: none;
+        }
+      }
+
+      &.vaporizers-main,
+      &.home-main {
+
+        img {
+          top: 0 !important;
+        }
+      }
+
+      &.vaporizers-main,
+      &.home-main{
+
+        img {
+          max-width: none;
+          min-height: 100%;
+          width: 100%;
+        }
+      }
+
+      &.vaporizers-portable {
+
+        img {
+          top: 0 !important;
+          width: 100%;
+        }
+      }
+
+      &.glass-main,
+      &.glass-hand-pipes,
+      &.glass-water-pipes,
+      &.glass-oil-rigs {
+        height: 240px !important;
+
+        img {
+          top: 0 !important;
+          width: 100%;
+        }
+
+        .info {
+          display: none;
+        }
+      }
+
+    }
+
+    .block-promo-2columns,
+    .block-promo-3columns,
+    .block-promo-wrapper {
+
+      .block-promo {
+        width: 100% !important;
+        margin: 0 !important;
+
+      }
+    }
+
+    .block-promo-wrapper {
+
+      .block-promo {
+
+        img {
+          max-width: none;
+          min-height: 100%;
+          width: 100%;
+        }
+
+        .content {
+          background-color: rgba(255, 255, 255, 0.9);
+          width: 90%;
+          height: 90%;
+          left: 5%;
+        }
+      }
+
+      .home-glass {
+
+        img {
+          top: 0 !important;
+        }
+      }
+    }
+
+    #layered-filter-block {
+      display: none;
+    }
+  }
+}
